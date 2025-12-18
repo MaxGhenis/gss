@@ -1,8 +1,8 @@
 site_name: gssdata
 site_description: Python client for General Social Survey data
-site_url: https://maxghenis.github.io/gss
-repo_url: https://github.com/MaxGhenis/gss
-repo_name: MaxGhenis/gss
+site_url: https://maxghenis.github.io/gssdata
+repo_url: https://github.com/MaxGhenis/gssdata
+repo_name: MaxGhenis/gssdata
 
 theme:
   name: material

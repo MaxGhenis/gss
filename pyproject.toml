@@ -42,10 +42,10 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/MaxGhenis/gss"
-Documentation = "https://maxghenis.github.io/gss"
-Repository = "https://github.com/MaxGhenis/gss"
-Issues = "https://github.com/MaxGhenis/gss/issues"
+Homepage = "https://github.com/MaxGhenis/gssdata"
+Documentation = "https://maxghenis.github.io/gssdata"
+Repository = "https://github.com/MaxGhenis/gssdata"
+Issues = "https://github.com/MaxGhenis/gssdata/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/gssdata"]

@@ -1,8 +1,8 @@
 # gssdata
 
 [![PyPI version](https://badge.fury.io/py/gssdata.svg)](https://badge.fury.io/py/gssdata)
-[![CI](https://github.com/MaxGhenis/gss/actions/workflows/ci.yml/badge.svg)](https://github.com/MaxGhenis/gss/actions/workflows/ci.yml)
-[![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://maxghenis.github.io/gss)
+[![CI](https://github.com/MaxGhenis/gssdata/actions/workflows/ci.yml/badge.svg)](https://github.com/MaxGhenis/gssdata/actions/workflows/ci.yml)
+[![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://maxghenis.github.io/gssdata)
 
 Python client for [General Social Survey (GSS)](https://gss.norc.org/) data.
 
@@ -70,7 +70,7 @@ The package includes 17 frequently-studied GSS variables spanning social attitud
 
 ## Documentation
 
-Full documentation: [maxghenis.github.io/gss](https://maxghenis.github.io/gss)
+Full documentation: [maxghenis.github.io/gssdata](https://maxghenis.github.io/gssdata)
 
 ## License
 
