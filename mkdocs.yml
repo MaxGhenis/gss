@@ -1,4 +1,4 @@
-site_name: gss
+site_name: gssdata
 site_description: Python client for General Social Survey data
 site_url: https://maxghenis.github.io/gss
 repo_url: https://github.com/MaxGhenis/gss

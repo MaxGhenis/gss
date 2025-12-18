@@ -1,35 +1,35 @@
-# gss
+# gssdata
 
 Python client for [General Social Survey (GSS)](https://gss.norc.org/) data.
 
 ## Installation
 
 ```bash
-pip install gss
+pip install gssdata
 ```
 
 ## Quick Start
 
 ```python
-import gss
+import gssdata
 
 # Get time series for a variable
-df = gss.trend("HOMOSEX")
+df = gssdata.trend("NATEDUC")
 print(df.head())
 #    year  pct
-# 0  1973   11
-# 1  1974   13
-# 2  1976   16
+# 0  1973   49
+# 1  1974   52
+# 2  1975   51
 # ...
 
 # List all available variables
-variables = gss.variables()
+variables = gssdata.variables()
 print(len(variables))  # 17 core variables
 
 # Get variable metadata
-info = gss.info("HOMOSEX")
+info = gssdata.info("NATEDUC")
 print(info["question"])
-# "What about sexual relations between two adults of the same sex..."
+# "Are we spending too much, too little, or about the right amount on education?"
 ```
 
 ## Features
@@ -39,7 +39,7 @@ print(info["question"])
 - **Full metadata**: Question text, response options, first year asked
 - **Zero dependencies on GSS servers**: Data bundled with package
 
-## Why gss?
+## Why gssdata?
 
 The General Social Survey is one of the most important sources of data on American public opinion, running continuously since 1972. However, accessing GSS data programmatically in Python has historically required:
 
@@ -48,7 +48,7 @@ The General Social Survey is one of the most important sources of data on Americ
 3. Computing weighted percentages
 4. Understanding variable coding
 
-**gss** eliminates this friction by providing pre-computed time series for the most commonly studied variables.
+**gssdata** eliminates this friction by providing pre-computed time series for the most commonly studied variables.
 
 ## Data Source
 

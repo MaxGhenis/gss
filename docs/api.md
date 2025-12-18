@@ -2,40 +2,40 @@
 
 ## Functions
 
-::: gss.trend
+::: gssdata.trend
 
-::: gss.variables
+::: gssdata.variables
 
-::: gss.info
+::: gssdata.info
 
 ## Examples
 
 ### Basic Usage
 
 ```python
-import gss
+import gssdata
 
 # Get available variables
-for var in gss.variables():
-    info = gss.info(var)
+for var in gssdata.variables():
+    info = gssdata.info(var)
     print(f"{var}: {info['description']}")
 ```
 
 ### Plotting Trends
 
 ```python
-import gss
+import gssdata
 import matplotlib.pyplot as plt
 
 # Get data
-df = gss.trend("HOMOSEX")
+df = gssdata.trend("NATEDUC")
 
 # Plot
 plt.figure(figsize=(10, 6))
 plt.plot(df["year"], df["pct"], marker="o")
 plt.xlabel("Year")
-plt.ylabel("% Not Wrong at All")
-plt.title("Acceptance of Same-Sex Relations (GSS)")
+plt.ylabel("% Too Little Spending")
+plt.title("Support for Education Spending (GSS)")
 plt.grid(True, alpha=0.3)
 plt.show()
 ```
@@ -43,14 +43,14 @@ plt.show()
 ### Comparing Variables
 
 ```python
-import gss
+import gssdata
 import pandas as pd
 
 # Compare multiple trends
-vars_to_compare = ["HOMOSEX", "GRASS", "PREMARSX"]
+vars_to_compare = ["NATEDUC", "NATHEAL", "NATENVIR"]
 dfs = []
 for var in vars_to_compare:
-    df = gss.trend(var)
+    df = gssdata.trend(var)
     df["variable"] = var
     dfs.append(df)
 

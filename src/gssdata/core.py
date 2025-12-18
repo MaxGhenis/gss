@@ -1,8 +1,8 @@
-"""Core API functions for gss package."""
+"""Core API functions for gssdata package."""
 
 import pandas as pd
 
-from gss.data import HISTORICAL_TRAJECTORIES, GSS_VARIABLES
+from gssdata.data import HISTORICAL_TRAJECTORIES, GSS_VARIABLES
 
 
 def variables() -> list[str]:
@@ -13,8 +13,8 @@ def variables() -> list[str]:
         List of variable names (uppercase strings).
 
     Example:
-        >>> import gss
-        >>> vars = gss.variables()
+        >>> import gssdata
+        >>> vars = gssdata.variables()
         >>> "HOMOSEX" in vars
         True
     """
@@ -40,8 +40,8 @@ def info(variable: str) -> dict:
         KeyError: If variable is not found.
 
     Example:
-        >>> import gss
-        >>> info = gss.info("HOMOSEX")
+        >>> import gssdata
+        >>> info = gssdata.info("HOMOSEX")
         >>> print(info["description"])
         Attitudes toward homosexual relations
     """
@@ -70,8 +70,8 @@ def trend(variable: str) -> pd.DataFrame:
         KeyError: If variable is not found.
 
     Example:
-        >>> import gss
-        >>> df = gss.trend("HOMOSEX")
+        >>> import gssdata
+        >>> df = gssdata.trend("HOMOSEX")
         >>> df[df["year"] == 2022]
            year  pct
         28 2022   61

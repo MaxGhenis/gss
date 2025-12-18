@@ -54,14 +54,14 @@ The package includes 17 frequently-studied GSS variables spanning social attitud
 To get full details for any variable:
 
 ```python
-import gss
+import gssdata
 
-info = gss.info("HOMOSEX")
+info = gssdata.info("NATEDUC")
 print(info["question"])
 # Full question text
 
 print(info["responses"])
-# {1: "Always wrong", 2: "Almost always wrong", ...}
+# {1: "Too little", 2: "About right", 3: "Too much"}
 
 print(info["first_year"])
 # 1973

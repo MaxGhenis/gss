@@ -1,6 +1,6 @@
-# gss
+# gssdata
 
-[![PyPI version](https://badge.fury.io/py/gss.svg)](https://badge.fury.io/py/gss)
+[![PyPI version](https://badge.fury.io/py/gssdata.svg)](https://badge.fury.io/py/gssdata)
 [![CI](https://github.com/MaxGhenis/gss/actions/workflows/ci.yml/badge.svg)](https://github.com/MaxGhenis/gss/actions/workflows/ci.yml)
 [![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://maxghenis.github.io/gss)
 
@@ -9,39 +9,38 @@ Python client for [General Social Survey (GSS)](https://gss.norc.org/) data.
 ## Installation
 
 ```bash
-pip install gss
+pip install gssdata
 ```
 
 ## Quick Start
 
 ```python
-import gss
+import gssdata
 
 # Get time series for a variable
-df = gss.trend("HOMOSEX")
+df = gssdata.trend("NATEDUC")
 print(df.head())
-#    year  pct  n
-# 0  1973   11  1446
-# 1  1974   13  1434
-# 2  1976   16  1466
+#    year  pct
+# 0  1973   49
+# 1  1974   52
+# 2  1975   51
 # ...
 
 # List all available variables
-variables = gss.variables()
+variables = gssdata.variables()
 print(len(variables))  # 17 core variables
 
 # Get variable metadata
-info = gss.info("HOMOSEX")
+info = gssdata.info("NATEDUC")
 print(info["question"])
-# "What about sexual relations between two adults of the same sex..."
+# "Are we spending too much, too little, or about the right amount on education?"
 print(info["responses"])
-# {1: "Always wrong", 2: "Almost always wrong", ...}
+# {1: "Too little", 2: "About right", 3: "Too much"}
 ```
 
 ## Features
 
 - **Simple API**: `trend()`, `variables()`, `info()` - that's it
-- **Automatic caching**: Downloads GSS data once, caches locally
 - **Pre-computed trends**: Fast access to time series for key variables
 - **Full metadata**: Question text, response options, first year asked
 
