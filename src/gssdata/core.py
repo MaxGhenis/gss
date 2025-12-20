@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-from gssdata.data import HISTORICAL_TRAJECTORIES, GSS_VARIABLES
+from gssdata.data import GSS_VARIABLES, HISTORICAL_TRAJECTORIES
 
 
 def variables() -> list[str]:
